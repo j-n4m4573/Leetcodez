@@ -75,3 +75,26 @@ def rotate_ll(llist, k):
         del ll_list[-1]
         ll_list[0] = temp_tail
    return ll_list 
+
+   """
+   Given an array of k singly-linked lists, each of whose values 
+   are in sorted order, combine all nodes (do not create new nodes) 
+   into one singly-linked list with all values in order.
+   """
+
+   def singly_fr_multiple(arr): 
+       ll_list = []
+       new_ll = LinkedList()
+
+       for item in arr:
+           for node in item: 
+               ll_list.append(node.data)
+        
+        ll_list.sort()
+
+        for item in ll_list:
+            new_ll.append(item) 
+            
+        return new_ll
+            
+           
